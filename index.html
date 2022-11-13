@@ -5,13 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GNSign</title>
-</head>
-<body>
-    <header>
-        
-    </header>
-    <main>
+    <link rel="icon" href="image/Favicon.png">
+    <link rel="stylesheet" href="css/all.css">
 
+</head>
+<body class="bg-default">
+    <header>
+        <div class="d-flex justify-content-between align-items-end px-38 mt-26 mb-12">
+            <h1><a href="index.html" class="logo"><img src="image/logo.png" alt="logo"></a></h1>
+            <button class="history">歷史紀錄</button>
+        </div>
+    </header>
+    <main class="container d-flex flex-column align-items-center">
+        <div class="d-flex flex-column align-items-center bg-tertiary radius-26 border-fifth border-3 border-dotted chooseFile">
+            <img src="image/pdf.png" alt="選擇檔案" class="img-pdf mb-20">
+            <label class="btn btn-primary-liner radius-16 mb-15 chooseFile-btn">
+                選擇檔案
+                <input class="d-none" type="file" id="getFile" >
+            </label>
+            <p>(限10MB 內的PDF或JPG檔)</p>
+
+        </div>
+        <div class="imgGroup pos-r">
+            <img src="image/people1.png" alt="people" class="img-person1 pos-a">
+            <img src="image/people2.png" alt="people" class="img-person2 pos-a">
+            <img src="image/people3.png" alt="people" class="img-person3 pos-a">
+            <img src="image/tree2.png" alt="tree" class="img-tree2 pos-a">
+            <img src="image/decoration.png" alt="decoration" class="img-decoration pos-a">
+            <img src="image/greenblock1.png" alt="greenblock1" class="img-greenblock1">
+        </div>
+        <p class="copyright">
+            小綠簽 © Code: Alex  /  Design: KT
+        </p>
     </main>
     <footer>
 

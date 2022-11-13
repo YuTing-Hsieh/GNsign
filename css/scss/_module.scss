@@ -2,6 +2,12 @@
     &-primary {
         background: $c-primary;
     }
+    &-tertiary{
+        background: $c-tertiary;
+    }
+    &-default {
+        background-color: $c-sixth;
+    }
 
 }
 
@@ -16,6 +22,9 @@
 
     &-block {
         display: block;
+    }
+    &-inlineblock{
+        display: inline-block;
     }
 
     &-md-none {
@@ -77,19 +86,33 @@
     &-0 {
         margin: 0px;
     }
-}
 
+    &t-26{
+        margin-top: 26px;
+    }
+}
+.mb{
+    &-12{
+        margin-bottom: 12px;
+    }
+    &-15{
+        margin-bottom: 15px;
+    }
+    &-20{
+        margin-bottom: 20px;
+    }
+}
 .p {
     &-16 {
         padding: 16px;
     }
 }
 
-.px-lg-0 {
-    @include rwd($lg) {
-        padding-right: 0px;
-        padding-left: 0px;
-    }
+.px{
+    &-38{
+        padding-right: 38px;
+        padding-left: 38px;
+    }    
 }
 
 .pos {
@@ -146,6 +169,9 @@
 .align-items {
     &-center {
         align-items: center;
+    }
+    &-end{
+        align-items: flex-end;
     }
 
     &-xl-stretch {
@@ -261,10 +287,7 @@
 //     }
 // }
 
-
-
 .btn {
-    border: 1px solid;
     cursor: pointer;
     text-align: center;
     &-default{
@@ -286,6 +309,7 @@
         color: $c-fourth;
         &-liner{
             background: $c-primary-liner;
+            color: $c-tertiary;
         }
         &:hover,&-liner:hover{
             background: $c-secondary;
@@ -334,5 +358,17 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+    }
+}
+
+.border{
+    &-fifth{
+        border-color: $c-fifth;
+    }
+    &-3{
+        border-width: 3px;
+    }
+    &-dotted{
+        border-style: dotted;
     }
 }

@@ -2,6 +2,7 @@
 /*color*/
 /*black*/
 /*gray*/
+/*background*/
 /*tertiary to fifth*/
 /*font*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
@@ -427,6 +428,10 @@ body {
   color: #1C8B6A;
 }
 
+h1 {
+  margin: 0;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 16px;
@@ -457,6 +462,14 @@ body {
   background: #1C8B6A;
 }
 
+.bg-tertiary {
+  background: #FFFFFF;
+}
+
+.bg-default {
+  background-color: #F0F0F0;
+}
+
 .d-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -469,6 +482,10 @@ body {
 
 .d-block {
   display: block;
+}
+
+.d-inlineblock {
+  display: inline-block;
 }
 
 @media screen and (min-width: 768px) {
@@ -529,15 +546,29 @@ body {
   margin: 0px;
 }
 
+.mt-26 {
+  margin-top: 26px;
+}
+
+.mb-12 {
+  margin-bottom: 12px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
 .p-16 {
   padding: 16px;
 }
 
-@media screen and (min-width: 1280px) {
-  .px-lg-0 {
-    padding-right: 0px;
-    padding-left: 0px;
-  }
+.px-38 {
+  padding-right: 38px;
+  padding-left: 38px;
 }
 
 .pos-r {
@@ -604,6 +635,12 @@ body {
           align-items: center;
 }
 
+.align-items-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 @media screen and (min-width: 1440px) {
   .align-items-xl-stretch {
     -webkit-box-align: stretch;
@@ -636,7 +673,6 @@ body {
 }
 
 .btn {
-  border: 1px solid;
   cursor: pointer;
   text-align: center;
 }
@@ -667,6 +703,7 @@ body {
 .btn-primary-liner {
   background: -webkit-gradient(linear, left top, left bottom, from(#35A483), to(#077854));
   background: linear-gradient(180deg, #35A483 0%, #077854 100%);
+  color: #FFFFFF;
 }
 
 .btn-primary:hover, .btn-primary-liner:hover {
@@ -713,5 +750,80 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.border-fifth {
+  border-color: #B7B7B7;
+}
+
+.border-3 {
+  border-width: 3px;
+}
+
+.border-dotted {
+  border-style: dotted;
+}
+
+.history {
+  border: none;
+  background: transparent;
+}
+
+.img-pdf {
+  width: 133px;
+}
+
+.img-person1 {
+  width: 142px;
+  left: -7px;
+  bottom: 26px;
+}
+
+.img-person2 {
+  width: 97px;
+  left: 117px;
+  bottom: 19px;
+}
+
+.img-person3 {
+  width: 108px;
+  left: 232px;
+  bottom: 33px;
+}
+
+.img-tree2 {
+  width: 76px;
+  left: 198px;
+  bottom: 19px;
+}
+
+.img-decoration {
+  width: 21px;
+  left: 244px;
+  bottom: 14px;
+}
+
+.img-greenblock1 {
+  width: 355px;
+}
+
+.chooseFile {
+  padding-top: 48.5px;
+  padding-bottom: 110.5px;
+  margin-bottom: 97px;
+  width: 100%;
+}
+
+.chooseFile-btn {
+  padding: 17px 68.5px;
+  display: inline-block;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  line-height: 17px;
+  color: #424242;
+  padding-bottom: 10px;
+  text-align: center;
 }
 /*# sourceMappingURL=all.css.map */

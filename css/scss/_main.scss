@@ -1,0 +1,57 @@
+.history{
+    border: none;
+    background:transparent;
+}
+.img{
+    &-pdf{
+        width: 133px;
+    }
+    &-person1{
+        width: 142px;
+        left: -7px;
+        bottom: 26px;
+    }
+    &-person2{
+        width: 97px;
+        left: 117px;
+        bottom: 19px;
+    }
+    &-person3{
+        width: 108px;
+        left: 232px;
+        bottom: 33px;
+    }
+    &-tree2{
+        width: 76px;
+        left: 198px;
+        bottom: 19px;
+    }
+    &-decoration{
+        width: 21px;
+        left: 244px;
+        bottom: 14px;
+    }
+    &-greenblock1{
+        width: 355px;
+    }
+    &Group{
+        
+    }
+
+}
+.chooseFile{
+    padding-top: 48.5px;
+    padding-bottom: 110.5px;
+    margin-bottom: 97px;
+    width: 100%;
+    &-btn{
+        padding: 17px 68.5px;
+        display: inline-block;
+    }
+}
+.copyright{
+    @include fzlh($fz-xs,$lh-xs);
+    color: $c-fourth;
+    padding-bottom: 10px;
+    text-align: center;
+}
