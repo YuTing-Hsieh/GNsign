@@ -1,0 +1,34 @@
+/*rwd*/
+// $sm: 650px;
+$md: 768px;
+$lg: 1280px; 
+$xl: 1440px;
+
+/*color*/
+$c-primary: #1C8B6A;
+$c-primary-liner:linear-gradient(180deg, #35A483 0%, #077854 100%);
+$c-secondary: #FFB800;
+$c-tertiary: #FFFFFF;
+$c-fourth: #424242; /*black*/
+$c-fifth: #B7B7B7; /*gray*/
+$c-filter:invert(50%) sepia(15%) saturate(16%) hue-rotate(103deg) brightness(96%) contrast(91%); /*tertiary to fifth*/
+
+/*font*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+$font-family: 'Noto Sans TC', sans-serif;
+
+
+$fz-base: 1rem;
+
+$fz-xs: $fz-base*0.75;/*12px*/
+$fz-sm: $fz-base*0.875;/*14px*/
+$fz-md: $fz-base;/*16px*/
+$fz-lg: $fz-base*1.125;/*18px*/
+$fz-xl: $fz-base*1.375;/*22px*/
+
+$lh-xs: 17px;
+$lh-sm: 20px;
+$lh-md-s: 19px;
+$lh-md-l: 23px;
+$lh-lg: 26px;
+$lh-xl: 32px;

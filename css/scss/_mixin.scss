@@ -1,0 +1,9 @@
+@mixin rwd($width){
+    @media screen and (min-width:$width){
+        @content;
+    }
+}
+@mixin fzlh($fz,$lh){
+    font-size: $fz;
+    line-height: $lh;
+}
