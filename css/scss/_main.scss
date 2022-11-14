@@ -39,12 +39,12 @@
     }
 
 }
-.chooseFile{
+.file-upload{
     padding-top: 48.5px;
     padding-bottom: 110.5px;
     margin-bottom: 97px;
     width: 100%;
-    &-btn{
+    &__btn{
         padding: 17px 68.5px;
         display: inline-block;
     }
@@ -54,4 +54,11 @@
     color: $c-fourth;
     padding-bottom: 10px;
     text-align: center;
+}
+.lottie{
+    width: 132px;
+    &__text{
+        color: $c-fourth;
+        @include fzlh($fz-lg,$lh-lg);
+    }
 }

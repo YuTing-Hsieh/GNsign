@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,10 @@
     <title>GNSign</title>
     <link rel="icon" href="image/Favicon.png">
     <link rel="stylesheet" href="css/all.css">
-
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 </head>
+
 <body class="bg-default">
     <header>
         <div class="d-flex justify-content-between align-items-end px-38 mt-26 mb-12">
@@ -17,12 +20,14 @@
         </div>
     </header>
     <main class="container d-flex flex-column align-items-center">
-        <div class="d-flex flex-column align-items-center bg-tertiary radius-26 border-fifth border-3 border-dotted chooseFile">
+        <div
+            class="d-flex flex-column align-items-center bg-tertiary radius-26 border-fifth border-3 border-dotted file-upload">
             <img src="image/pdf.png" alt="選擇檔案" class="img-pdf mb-20">
-            <label class="btn btn-primary-liner radius-16 mb-15 chooseFile-btn">
+            <label class="btn btn-primary-liner radius-16 mb-15 file-upload__btn">
                 選擇檔案
-                <input class="d-none" type="file" id="getFile" >
+                <input class="d-none" type="file" id="file-upload" accept="application/pdf">
             </label>
+            <span class="mb-15" id="file-selected"></span>
             <p>(限10MB 內的PDF或JPG檔)</p>
 
         </div>
@@ -35,11 +40,19 @@
             <img src="image/greenblock1.png" alt="greenblock1" class="img-greenblock1">
         </div>
         <p class="copyright">
-            小綠簽 © Code: Alex  /  Design: KT
+            小綠簽 © Code: YuTing / Design: KT
         </p>
     </main>
     <footer>
 
     </footer>
+
+
+    <!-- 引入需要的的套件 -->
+    <script src="https://unpkg.com/fabric@latest/dist/fabric.js"></script> <!--將 PDF 變為 canvas 背景-->
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script> <!-- PDF 渲染在畫面上-->
+    <script src="js/pdf.js"></script>
+    
+    <script src="js/all.js"></script>
 </body>
 </html>

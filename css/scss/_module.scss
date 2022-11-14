@@ -1,4 +1,4 @@
-.bg {
+ .bg {
     &-primary {
         background: $c-primary;
     }
@@ -79,6 +79,11 @@
         @include rwd($lg) {
             width: auto;
         }
+    }
+}
+.vh{
+    &-100{
+        height: 100vh;
     }
 }
 
@@ -192,6 +197,10 @@
 
     &-between {
         justify-content: space-between;
+    }
+
+    &-center{
+        justify-content: center;
     }
 }
 
