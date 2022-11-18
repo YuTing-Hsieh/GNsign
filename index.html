@@ -8,15 +8,14 @@
     <title>GNSign</title>
     <link rel="icon" href="image/Favicon.png">
     <link rel="stylesheet" href="css/all.css">
-    <script src="https://code.jquery.com/jquery-3.6.1.js"
-        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
 </head>
 
 <body class="bg-default">
     <header>
         <div class="d-flex justify-content-between align-items-end px-38 mt-26 mb-12">
             <h1><a href="index.html" class="logo"><img src="image/logo.png" alt="logo"></a></h1>
-            <button class="history">歷史紀錄</button>
+            <button class="btn">歷史紀錄</button>
         </div>
     </header>
     <main class="container d-flex flex-column align-items-center">
@@ -29,9 +28,8 @@
             </label>
             <span class="mb-15" id="file-selected"></span>
             <p>(限10MB 內的PDF或JPG檔)</p>
-
         </div>
-        <div class="imgGroup pos-r">
+        <div class="pos-r">
             <img src="image/people1.png" alt="people" class="img-person1 pos-a">
             <img src="image/people2.png" alt="people" class="img-person2 pos-a">
             <img src="image/people3.png" alt="people" class="img-person3 pos-a">
@@ -39,20 +37,19 @@
             <img src="image/decoration.png" alt="decoration" class="img-decoration pos-a">
             <img src="image/greenblock1.png" alt="greenblock1" class="img-greenblock1">
         </div>
+    </main>
+    <footer>
         <p class="copyright">
             小綠簽 © Code: YuTing / Design: KT
         </p>
-    </main>
-    <footer>
 
     </footer>
-
-
-    <!-- 引入需要的的套件 -->
-    <script src="https://unpkg.com/fabric@latest/dist/fabric.js"></script> <!--將 PDF 變為 canvas 背景-->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/fabric@latest/dist/fabric.js"></script>
+    <!--將 PDF 變為 canvas 背景-->
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script> <!-- PDF 渲染在畫面上-->
-    <script src="js/pdf.js"></script>
-    
-    <script src="js/all.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>

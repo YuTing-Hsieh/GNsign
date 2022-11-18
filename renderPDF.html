@@ -1,16 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>GNSign</title>
-        <link rel="icon" href="image/Favicon.png">
-        <link rel="stylesheet" href="css/all.css">
-        <script src="https://code.jquery.com/jquery-3.6.1.js"
-            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNSign</title>
+    <link rel="icon" href="image/Favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="css/all.css">
+
+</head>
+
 <body>
+    <div class="d-flex align-items-stretch flex-column container bg-default">
+        <ul class="d-flex nav-top my-16">
+            <li class="d-flex bg-tertiary flex-1 justify-content-between align-items-center radius-16 mr-9">
+                <button class="btn btn-primary img-angle radius-12" id="pdfPage-prev"><img src="image/angle-left.svg"
+                        alt="上一頁"></button>
+                <p class="pageNumber"> <span class="page_num"></span> / <span class="page_count"></span> </p>
+                <button class="btn btn-primary img-angle radius-12" id="pdfPage-next"><img src="image/angle-right.svg"
+                        alt="下一頁"></button>
+            </li>
+            <li>
+                <button class="btn btn-primary-liner radius-16 d-flex justify-content-center nav-top__btn">完成簽署</button>
+            </li>
+        </ul>
+        <div class="canvas-wrap mb-24 pos-r">
+            <canvas id="canvas"></canvas>
+        </div>
+        <ul class="nav-bottom d-flex justify-content-center bg-tertiary mb-24">
+            <li class="nav-bottom__item d-flex flex-column align-item-center mx-4 unactive" data-toggle="modal"
+                data-target="#modal-sign">
+                <div class="nav-bottom__img btn-primary-liner radius-9">
+                    <img src="image/sign.svg" alt="簽名">
+                </div>
+                <p class="text-center">簽名</p>
+            </li>
+            <li class="nav-bottom__item d-flex flex-column align-item-center mx-4 unactive" onclick="insertToCanvs('check','');">
+                <div class="nav-bottom__img btn-primary-liner radius-9">
+                    <img src="image/check.svg" alt="勾選">
+                </div>
+                <p class="text-center">勾選</p>
+            </li>
+            <li class="nav-bottom__item d-flex flex-column align-item-center mx-4 unactive" onclick="insertToCanvs('date','');">
+                <div class="nav-bottom__img btn-primary-liner radius-9">
+                    <img src="image/date.svg" alt="日期">
+                </div>
+                <p class="text-center">日期</p>
+            </li>
+            <li class="nav-bottom__item d-flex flex-column align-item-center mx-4 unactive" onclick="insertToCanvs('word','');">
+                <div class="nav-bottom__img btn-primary-liner radius-9">
+                    <img src="image/word.svg" alt="輸入文字">
+                </div>
+                <p class="text-center">輸入文字</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal bg-default p-16" id="modal-sign" aria-hidden="true">
+        <div class="modal-title mb-12 text-center">請選擇簽名</div>
+        <div class="modal-body d-flex flex-column">
+            <ul class="signList"></ul>
+        </div>
+        <div class="modal-footer">
+            <button class="btn newSign">+ 新增簽名</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+    <!-- 引入需要的的套件 -->
+    <script src="https://unpkg.com/fabric@latest/dist/fabric.js"></script>
+    <!--將 PDF 變為 canvas 背景-->
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script> <!-- PDF 渲染在畫面上-->
+    <script src="js/pdf.js"></script>
 
 </body>
+
 </html>

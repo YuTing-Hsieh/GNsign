@@ -80,44 +80,75 @@
             width: auto;
         }
     }
+    &-130p{
+        width: 130px;
+    }
 }
 .vh{
     &-100{
-        height: 100vh;
+        height: 100vh !important;
     }
 }
 
 .m {
     &-0 {
-        margin: 0px;
+        margin: 0px !important;
+    }
+    &r-9{
+        margin-right: 9px;
     }
 
     &t-26{
-        margin-top: 26px;
+        margin-top: 26px !important;
     }
-}
-.mb{
-    &-12{
-        margin-bottom: 12px;
+    &b-12{
+        margin-bottom: 12px !important;
     }
-    &-15{
-        margin-bottom: 15px;
+    &b-15{
+        margin-bottom: 15px !important;
     }
-    &-20{
-        margin-bottom: 20px;
+    &b-20{
+        margin-bottom: 20px !important;
     }
+    &b-24{
+        margin-bottom: 24px !important;
+    }
+    &b-25{
+        margin-bottom: 25px !important;
+    }
+    &b-53{
+        margin-bottom: 53px !important;
+    }
+    &y-16{
+        margin-top: 16px !important;
+        margin-bottom: 16px !important;
+    }
+    &x-4{
+        margin-right: 4px;
+        margin-left: 4px;
+    }
+
 }
 .p {
     &-16 {
-        padding: 16px;
+        padding: 16px !important;
     }
-}
-
-.px{
-    &-38{
-        padding-right: 38px;
-        padding-left: 38px;
-    }    
+    &x-38{
+        padding-right: 38px !important;
+        padding-left: 38px !important;
+    } 
+    &y-15{
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+    &y-16{
+        padding-top: 16px !important;
+        padding-bottom: 16px !important;
+    }
+    &y-28{
+        padding-top: 28px !important;
+        padding-bottom: 28px !important;
+    }
 }
 
 .pos {
@@ -169,6 +200,9 @@
             flex-direction: row;
         }
     }
+    &-1{
+        flex: 1;
+    }
 }
 
 .align-items {
@@ -177,6 +211,9 @@
     }
     &-end{
         align-items: flex-end;
+    }
+    &-stretch{
+        align-items: stretch;
     }
 
     &-xl-stretch {
@@ -208,111 +245,47 @@
     transform: rotateY(180deg);
 }
 
-// .navbar {
-//     &__item {
-//         padding: 0 16px;
-//         color: $c-n2;
-//         font-size: $fz-h5;
-//         line-height: $lh-h5;
-//         position: relative;
-//         display: block;
-//     }
+.nav-top{
+    &__item{
+        width: 120px;
+        font-size: $fz-md;
+        line-height: $lh-md-l;
+        padding-top: 8.5px;
+        padding-bottom: 8.5px;
+        &.active{
+            background: $c-primary-liner;
+            color: $c-tertiary;        }
+    }
+    &__btn{
+        width: 130px;
+        font-size: $fz-lg;
+        line-height: $lh-lg;
+        padding-top: 16px !important;
+        padding-bottom: 16px !important;
+    }
+}
+.nav-bottom{
+    padding-top: 6.5px;
+    padding-bottom: 6.5px;
+    &__item{
+        @include fzlh($fz-xs,$lh-xs);
+        cursor: pointer;
+    }
+    &__img{
+        width: 40px;
+        padding: 10.5px;
+        margin: 0 8px 2px 8px;        
+    }
 
-//     &__item:hover,
-//     .active {
-//         color: $c-n1;
-//         text-shadow: 0px 0px 10px rgba($c-n1, 0.6);
-//     }
-
-//     &__item:hover::after,
-//     .active::after {
-//         content: "";
-//         width: 12px;
-//         height: 4px;
-//         background: $c-g1;
-//         position: absolute;
-//         left: calc(50% - 6px);
-//         bottom: -8px;
-//         border-radius: 20px;
-//         box-shadow: 0px 0px 10px rgba($c-g1, 0.6);
-//     }
-
-//     &.nav-tabs {
-//         flex-flow: row;
-//         overflow-x: scroll;
-//         width: 100%;
-
-//         @include rwd($md) {
-//             width: auto;
-//         }
-
-//         .navbar__item {
-//             border: 0px;
-//             background: transparent;
-//             margin-bottom: 24px;
-//             flex: 1;
-//             min-width: max-content;
-//             cursor: pointer;
-//         }
-
-//         &::-webkit-scrollbar {
-//             width: 2px;
-//         }
-
-//         &::-webkit-scrollbar-button {
-//             display: none;
-//         }
-
-//         &::-webkit-scrollbar-track-piece {
-//             background: transparent;
-//         }
-
-//         &::-webkit-scrollbar-thumb {
-//             border-radius: 4px;
-//             background-color: rgba($c-n5, 0.4);
-//             border: 0px;
-//         }
-
-//         &::-webkit-scrollbar-track {
-//             box-shadow: transparent;
-//         }
-//     }
-// }
-
-// .nav-tab {
-//     &__content {
-//         margin-bottom: 32px;
-//     }
-
-//     &__pane {
-//         padding: 32px 24px;
-//         display: none;
-
-//         &.show {
-//             display: block !important;
-//         }
-
-//         max-width: 688px;
-//     }
-// }
+}
 
 .btn {
     cursor: pointer;
     text-align: center;
-    &-default{
-        img{
-            filter: $c-filter;
-            background: #F0F0F0;
-        }
-        color: $c-fifth;
-        &.click{
-            img{
-                filter:none;
-                background: $c-primary-liner;
-                color: $c-primary;
-            }
-        }
-    }
+    border: none;
+    background:transparent;
+    padding: 0px;
+
     &-primary {
         background: $c-primary;
         color: $c-fourth;
@@ -324,12 +297,19 @@
             background: $c-secondary;
         }
     }
-    &-secondary {
-        background: $c-fourth;
+    &-tertiary{
+        background: $c-tertiary;
         color: $c-primary;
-        border: 1px solid $c-primary;
+    }
+    &-group{
+        @include fzlh($fz-lg,$lh-lg);
+        li+li{
+            margin-left: 12px;
+        }
     }
 }
+
+
 
 .radius {
     &-9 {
@@ -374,10 +354,20 @@
     &-fifth{
         border-color: $c-fifth;
     }
+    &-primary{
+        border-color: $c-primary;
+    }
+    &-1{
+        border-width: 1px;
+    }
     &-3{
         border-width: 3px;
     }
     &-dotted{
         border-style: dotted;
     }
+    &-solid{
+        border-style: solid;
+    }
 }
+

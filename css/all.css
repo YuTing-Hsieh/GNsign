@@ -4,6 +4,7 @@
 /*gray*/
 /*background*/
 /*tertiary to fifth*/
+/*tertiary to primary*/
 /*font*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 /*12px*/
@@ -408,15 +409,6 @@ h1 {
   }
 }
 
-.l-list {
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.l-list__item {
-  margin: 0 20px 40px 20px;
-}
-
 .bg-primary {
   background: #1C8B6A;
 }
@@ -483,35 +475,68 @@ h1 {
     width: auto;
   }
 }
+.width-130p {
+  width: 130px;
+}
 
 .vh-100 {
-  height: 100vh;
+  height: 100vh !important;
 }
 
 .m-0 {
-  margin: 0px;
+  margin: 0px !important;
+}
+.mr-9 {
+  margin-right: 9px;
 }
 .mt-26 {
-  margin-top: 26px;
+  margin-top: 26px !important;
 }
-
 .mb-12 {
-  margin-bottom: 12px;
+  margin-bottom: 12px !important;
 }
 .mb-15 {
-  margin-bottom: 15px;
+  margin-bottom: 15px !important;
 }
 .mb-20 {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
+}
+.mb-24 {
+  margin-bottom: 24px !important;
+}
+.mb-25 {
+  margin-bottom: 25px !important;
+}
+.mb-53 {
+  margin-bottom: 53px !important;
+}
+.my-16 {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}
+.mx-4 {
+  margin-right: 4px;
+  margin-left: 4px;
 }
 
 .p-16 {
-  padding: 16px;
+  padding: 16px !important;
 }
-
 .px-38 {
-  padding-right: 38px;
-  padding-left: 38px;
+  padding-right: 38px !important;
+  padding-left: 38px !important;
+}
+.py-15 {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+.py-16 {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+.py-28 {
+  padding-top: 28px !important;
+  padding-bottom: 28px !important;
 }
 
 .pos-r {
@@ -551,12 +576,18 @@ h1 {
     flex-direction: row;
   }
 }
+.flex-1 {
+  flex: 1;
+}
 
 .align-items-center {
   align-items: center;
 }
 .align-items-end {
   align-items: flex-end;
+}
+.align-items-stretch {
+  align-items: stretch;
 }
 @media screen and (min-width: 1440px) {
   .align-items-xl-stretch {
@@ -581,21 +612,46 @@ h1 {
   transform: rotateY(180deg);
 }
 
+.nav-top__item {
+  width: 120px;
+  font-size: 1rem;
+  line-height: 23px;
+  padding-top: 8.5px;
+  padding-bottom: 8.5px;
+}
+.nav-top__item.active {
+  background: linear-gradient(180deg, #35A483 0%, #077854 100%);
+  color: #FFFFFF;
+}
+.nav-top__btn {
+  width: 130px;
+  font-size: 1.125rem;
+  line-height: 26px;
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+.nav-bottom {
+  padding-top: 6.5px;
+  padding-bottom: 6.5px;
+}
+.nav-bottom__item {
+  font-size: 0.75rem;
+  line-height: 17px;
+  cursor: pointer;
+}
+.nav-bottom__img {
+  width: 40px;
+  padding: 10.5px;
+  margin: 0 8px 2px 8px;
+}
+
 .btn {
   cursor: pointer;
   text-align: center;
-}
-.btn-default {
-  color: #B7B7B7;
-}
-.btn-default img {
-  filter: invert(50%) sepia(15%) saturate(16%) hue-rotate(103deg) brightness(96%) contrast(91%);
-  background: #F0F0F0;
-}
-.btn-default.click img {
-  filter: none;
-  background: linear-gradient(180deg, #35A483 0%, #077854 100%);
-  color: #1C8B6A;
+  border: none;
+  background: transparent;
+  padding: 0px;
 }
 .btn-primary {
   background: #1C8B6A;
@@ -608,10 +664,16 @@ h1 {
 .btn-primary:hover, .btn-primary-liner:hover {
   background: #FFB800;
 }
-.btn-secondary {
-  background: #424242;
+.btn-tertiary {
+  background: #FFFFFF;
   color: #1C8B6A;
-  border: 1px solid #1C8B6A;
+}
+.btn-group {
+  font-size: 1.125rem;
+  line-height: 26px;
+}
+.btn-group li + li {
+  margin-left: 12px;
 }
 
 .radius-9 {
@@ -646,16 +708,20 @@ h1 {
 .border-fifth {
   border-color: #B7B7B7;
 }
+.border-primary {
+  border-color: #1C8B6A;
+}
+.border-1 {
+  border-width: 1px;
+}
 .border-3 {
   border-width: 3px;
 }
 .border-dotted {
   border-style: dotted;
 }
-
-.history {
-  border: none;
-  background: transparent;
+.border-solid {
+  border-style: solid;
 }
 
 .img-pdf {
@@ -689,6 +755,22 @@ h1 {
 .img-greenblock1 {
   width: 355px;
 }
+.img-angle {
+  width: 30px;
+  height: 30px;
+  padding: 10.28px 11.96px;
+  margin: 14px 16px;
+}
+.img-delete {
+  width: 20px;
+  margin-left: 18px;
+  filter: invert(50%) sepia(15%) saturate(16%) hue-rotate(103deg) brightness(96%) contrast(91%);
+  cursor: pointer;
+}
+.img-delete:hover {
+  filter: invert(50%) sepia(63%) saturate(6669%) hue-rotate(144deg) brightness(86%) contrast(78%);
+}
+
 .file-upload {
   padding-top: 48.5px;
   padding-bottom: 110.5px;
@@ -715,4 +797,110 @@ h1 {
   color: #424242;
   font-size: 1.125rem;
   line-height: 26px;
+}
+
+.colorPicker {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  margin: 0px 8px;
+  cursor: pointer;
+}
+.colorPicker button {
+  border: 3px solid #FFFFFF;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.colorPicker.black button {
+  background: #000;
+}
+.colorPicker.black.active {
+  border-color: #000;
+}
+.colorPicker.red button {
+  background: #CA0000;
+}
+.colorPicker.red.active {
+  border-color: #CA0000;
+}
+.colorPicker.blue button {
+  background: #0014C7;
+}
+.colorPicker.blue.active {
+  border-color: #0014C7;
+}
+
+.canvas-content {
+  color: #B7B7B7;
+  font-size: 1.125rem;
+  line-height: 26px;
+}
+.canvas-sign {
+  width: 100%;
+  height: 200px;
+}
+
+.pageNumber {
+  color: #424242;
+}
+
+.canvas-wrap {
+  width: 100%;
+  height: calc(100vh - 90px - 120px);
+  overflow: overlay;
+}
+.canvas-wrap::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.canvas-wrap::-webkit-scrollbar-button {
+  display: none;
+}
+.canvas-wrap::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+.canvas-wrap::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: transparent;
+  border: 0px;
+}
+.canvas-wrap::-webkit-scrollbar-track {
+  box-shadow: transparent;
+}
+
+.unactive {
+  color: #B7B7B7;
+}
+.unactive .nav-bottom__img {
+  background: #F0F0F0;
+}
+.unactive .nav-bottom__img img {
+  filter: invert(50%) sepia(15%) saturate(16%) hue-rotate(103deg) brightness(96%) contrast(91%);
+}
+.unactive.nav-bottom__item:hover {
+  color: #FFB800;
+}
+.unactive.nav-bottom__item:hover .nav-bottom__img {
+  background: #FFB800;
+}
+.unactive.nav-bottom__item:hover .nav-bottom__img img {
+  filter: none;
+}
+
+.newSign {
+  color: #1C8B6A;
+  font-size: 1rem;
+  line-height: 23px;
+}
+
+.signList .sign {
+  height: 61px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  padding: 5px;
 }/*# sourceMappingURL=all.css.map */

@@ -13,7 +13,7 @@ $c-fourth: #424242; /*black*/
 $c-fifth: #B7B7B7; /*gray*/
 $c-sixth:#F0F0F0; /*background*/
 $c-filter:invert(50%) sepia(15%) saturate(16%) hue-rotate(103deg) brightness(96%) contrast(91%); /*tertiary to fifth*/
-
+$c-filter-primary:invert(50%) sepia(63%) saturate(6669%) hue-rotate(144deg) brightness(86%) contrast(78%); /*tertiary to primary*/
 /*font*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
 $font-family: 'Noto Sans TC', sans-serif;

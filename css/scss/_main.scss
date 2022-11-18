@@ -1,6 +1,5 @@
 .history{
-    border: none;
-    background:transparent;
+
 }
 .img{
     &-pdf{
@@ -34,10 +33,21 @@
     &-greenblock1{
         width: 355px;
     }
-    &Group{
-        
+    &-angle{
+       width: 30px;
+       height: 30px;        
+       padding: 10.28px 11.96px; 
+       margin: 14px 16px;
     }
-
+    &-delete{
+        width: 20px;
+        margin-left: 18px;
+        filter: $c-filter;
+        cursor: pointer;
+        &:hover{
+            filter:$c-filter-primary;
+        }
+    }
 }
 .file-upload{
     padding-top: 48.5px;
@@ -61,4 +71,123 @@
         color: $c-fourth;
         @include fzlh($fz-lg,$lh-lg);
     }
+}
+
+.colorPicker{    
+    border: 2px solid transparent;
+    border-radius: 50%;
+    margin: 0px 8px;
+    cursor: pointer;
+    button{
+        border: 3px solid $c-tertiary;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    }
+    &.black{
+        button{
+            background: #000;
+        }        
+        &.active{
+            border-color: #000;
+        }
+    }
+    &.red{
+        button{
+            background: #CA0000;
+        }        
+        &.active{
+            border-color: #CA0000;
+        }
+    }
+    &.blue{
+        button{
+            background: #0014C7;
+        }        
+        &.active{
+            border-color: #0014C7;
+        }
+    }
+}
+
+.canvas{
+    &-content{
+        color: $c-fifth;
+        @include fzlh($fz-lg,$lh-lg);
+    }
+    &-sign{
+        width: 100%;
+        height: 200px;
+    }
+}
+
+.pageNumber{
+    color: $c-fourth;
+}
+.canvas-wrap{
+    width: 100%;
+    height: calc(100vh - 90px - 120px);
+    overflow: overlay;
+    &::-webkit-scrollbar { 
+        width: 10px;
+        height: 10px;
+      }        
+    &::-webkit-scrollbar-button {
+        display: none;
+      }        
+    &::-webkit-scrollbar-track-piece {
+        background: transparent;
+      }        
+    &::-webkit-scrollbar-thumb {       
+        border-radius: 4px;        
+        background-color: transparent;        
+        border: 0px;        
+      }        
+    &::-webkit-scrollbar-track { 
+        box-shadow: transparent;
+      }
+   
+}
+.unactive{
+    color: $c-fifth;
+    .nav-bottom{        
+        &__img{
+            background: $c-sixth;
+            img{
+                filter: $c-filter;
+            }
+        }
+        
+    }   
+    &.nav-bottom{
+        &__item:hover{
+            color: $c-secondary;
+            .nav-bottom__img {
+                background: $c-secondary;
+                img{
+                    filter: none;
+                }
+            }
+           
+        }
+    } 
+}
+
+.newSign{
+    color: $c-primary;
+    @include fzlh($fz-md,$lh-md-l);
+}
+
+.signList{
+    .sign{
+        height: 61px;
+        cursor: pointer;
+    }
+
+}
+.deleteBtn{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    padding: 5px;
 }

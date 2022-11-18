@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNSign</title>
+    <link rel="icon" href="image/Favicon.png">
+    <link rel="stylesheet" href="css/all.css">
+
+
+</head>
+
+<body>
+    <div class="d-flex flex-column align-items-center container bg-default py-28">
+        <ul class="d-flex bg-tertiary radius-14 mb-53 nav-top">
+            <li class="nav-top__item d-flex justify-content-center radius-14 btn-tertiary active">手寫簽名</li>
+            <li class="nav-top__item d-flex justify-content-center radius-14 btn-tertiary ">匯入簽名檔</li>
+        </ul>
+        <ul class="d-flex mb-12">
+            <li class="colorPicker black active">
+                <button class="btn"></button>
+            </li>
+            <li class="colorPicker blue">
+                <button class="btn"></button>
+            </li>
+            <li class="colorPicker red">
+                <button class="btn"></button>
+            </li>
+        </ul>
+        <div class="pos-r d-flex align-items-center justify-content-center mb-25">
+            <div class="pos-a canvas-content">自此書寫你的簽名</div>
+            <canvas class="canvas-sign bg-tertiary" id="canvas"></canvas>
+        </div>
+        <ul class="d-flex width-100 btn-group">
+            <li class="flex-1 py-15 radius-16 btn btn-tertiary border-primary border-1 border-solid clear">清除</li>
+            <li class="flex-1 py-15 radius-16 btn btn-primary-liner save">建立簽名</li>
+        </ul>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="js/canvas.js"></script>
+</body>
+
+</html>

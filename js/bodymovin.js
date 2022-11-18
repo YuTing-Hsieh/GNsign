@@ -11,7 +11,7 @@ var animation = bodymovin.loadAnimation({
     autoplay: true // Optional
 })
 
-setTimeout('nextpage()', 5000);
+setTimeout('nextpage()', 1000);
 
 function nextpage() {
     location.href = nextPage + ".html";
