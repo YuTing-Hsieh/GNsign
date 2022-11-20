@@ -7,7 +7,7 @@ const lottieLoop = JSON.parse(localStorage.getItem("lottieLoop"));
 $('.lottie__text').html(lottieText);
 var animation = bodymovin.loadAnimation({
     container: document.getElementById('lottie'), // Required
-    path: '../image/' + lottiePath, // Required
+    path: '~/../image/' + lottiePath, // Required
     renderer: 'svg', // Required
     loop: lottieLoop, // Optional
     autoplay: true // Optional
