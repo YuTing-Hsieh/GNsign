@@ -23,3 +23,6 @@ function deleteItem(key, deleteData) {
         localStorage.setItem(key, JSON.stringify(StorageArray));
     }
 }
+function clearAll(){
+    localStorage.clear();
+}

@@ -15,7 +15,11 @@
     <header>
         <div class="d-flex justify-content-between align-items-end px-38 mt-26 mb-12">
             <h1><a href="index.html" class="logo"><img src="image/logo.png" alt="logo"></a></h1>
-            <a class="history" href="history.html">歷史紀錄</a>
+            <div>
+                <a class="history mr-9" href="history.html">歷史紀錄</a>
+                <button class="clearAll btn">清除暫存資訊</button>
+            </div>
+
         </div>
     </header>
     <main class="container d-flex flex-column align-items-center">
@@ -49,6 +53,7 @@
     <script src="https://unpkg.com/fabric@latest/dist/fabric.js"></script>
     <!--將 PDF 變為 canvas 背景-->
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script> <!-- PDF 渲染在畫面上-->
+    <SCript src="js/storage.js"></SCript>
     <script src="js/index.js"></script>
 </body>
 

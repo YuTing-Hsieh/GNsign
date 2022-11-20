@@ -3,6 +3,9 @@ $('#file-upload').bind('change', function () {
   fileName = $(this).val();
   $('#file-selected').html(fileName);
 })
+$('.clearAll').on('click',function(){
+  clearAll();
+})
 
 localStorage.setItem('selectFile', ''); //清空檔案
 

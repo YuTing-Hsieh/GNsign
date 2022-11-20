@@ -887,8 +887,12 @@ h1 {
   border-style: solid;
 }
 
-.history {
+.history, .clearAll {
   color: #1C8B6A;
+}
+
+.history:hover, .clearAll:hover {
+  color: #FFB800;
 }
 
 .img-pdf {
