@@ -23,50 +23,71 @@
                         alt="下一頁"></button>
             </li>
             <li>
-                <button class="btn btn-primary-liner radius-16 d-flex justify-content-center nav-top__btn">完成簽署</button>
+                <button class="btn btn-primary-liner radius-16 d-flex justify-content-center nav-top__btn" id="finishSign">完成簽署</button>
+                <button class="btn btn-tertiary radius-16 d-flex justify-content-center nav-top__btn d-none" id="toIndex">回首頁</button>
             </li>
         </ul>
-        <div class="canvas-wrap mb-24 pos-r">
-            <canvas id="canvas"></canvas>
+        <div class="d-flex justify-content-center">
+            <div class="canvas-wrap pos-r d-flex justify-content-center">
+                <canvas id="canvas"></canvas>
+            </div>
         </div>
-        <ul class="nav-bottom d-flex justify-content-center bg-tertiary mb-24">
-            <li class="nav-bottom__item d-flex flex-column align-item-center mx-4 unactive" data-toggle="modal"
+        <ul class="nav-bottom d-flex justify-content-center bg-tertiary my-24" id="editTools">
+            <li class="nav-bottom__item d-flex flex-column align-item-center mx-4 unactive editTools__sign" data-toggle="modal"
                 data-target="#modal-sign">
                 <div class="nav-bottom__img btn-primary-liner radius-9">
                     <img src="image/sign.svg" alt="簽名">
                 </div>
                 <p class="text-center">簽名</p>
             </li>
-            <li class="nav-bottom__item d-flex flex-column align-item-center mx-4 unactive" onclick="insertToCanvs('check','');">
+            <li class="nav-bottom__item d-flex flex-column align-item-center mx-4 unactive editTools__check">
                 <div class="nav-bottom__img btn-primary-liner radius-9">
                     <img src="image/check.svg" alt="勾選">
                 </div>
                 <p class="text-center">勾選</p>
             </li>
-            <li class="nav-bottom__item d-flex flex-column align-item-center mx-4 unactive" onclick="insertToCanvs('date','');">
+            <li class="nav-bottom__item d-flex flex-column align-item-center mx-4 unactive editTools__date">
                 <div class="nav-bottom__img btn-primary-liner radius-9">
                     <img src="image/date.svg" alt="日期">
                 </div>
                 <p class="text-center">日期</p>
             </li>
-            <li class="nav-bottom__item d-flex flex-column align-item-center mx-4 unactive" onclick="insertToCanvs('word','');">
+            <li class="nav-bottom__item d-flex flex-column align-item-center mx-4 unactive editTools__word">
                 <div class="nav-bottom__img btn-primary-liner radius-9">
                     <img src="image/word.svg" alt="輸入文字">
                 </div>
                 <p class="text-center">輸入文字</p>
             </li>
         </ul>
+        <div class="d-flex justify-content-center my-32">
+            <button class="btn btn-primary-liner btn-md py-16 radius-16 d-flex justify-content-center d-none" id="savePDF">儲存</button>
+        </div>
     </div>
 
     <!-- Modal -->
-    <div class="modal bg-default p-16" id="modal-sign" aria-hidden="true">
+    <div class="modal bg-default p-16 radius-16" id="modal-sign" aria-hidden="true">
         <div class="modal-title mb-12 text-center">請選擇簽名</div>
         <div class="modal-body d-flex flex-column">
             <ul class="signList"></ul>
         </div>
         <div class="modal-footer">
-            <button class="btn newSign">+ 新增簽名</button>
+            <button class="btn newSign" onclick="location.href='sign.html'">+ 新增簽名</button>
         </div>
+    </div>
+    <div class="modal bg-default p-16 radius-26" id="modal-unfinish" aria-hidden="true">
+        <div class="modal-title mb-28 text-center">請置入簽名後再完成簽署</div>
+        <div class="modal-body d-flex flex-column align-items-center">
+            <a class="btn btn-primary btn-md py-15 radius-16 d-flex justify-content-center" rel="modal:close">確定</a>
+        </div>
+
+    </div>
+    <div class="modal bg-default p-16 radius-26" id="modal-unSave" aria-hidden="true">
+        <div class="modal-title mb-28 text-center">尚未儲存文件，確定要離開且刪除？</div>
+        <div class="modal-body d-flex justify-content-center btn-group">
+            <a class="btn btn-tertiary border-1 border-solid border-primary flex-1 py-15 radius-16 d-flex justify-content-center" rel="modal:close">取消</a>
+            <a class="btn btn-primary flex-1 py-15 radius-16 d-flex justify-content-center" href="index.html">確定</a>
+        </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.1.js"
@@ -74,9 +95,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
     <!-- 引入需要的的套件 -->
-    <script src="https://unpkg.com/fabric@latest/dist/fabric.js"></script>
-    <!--將 PDF 變為 canvas 背景-->
+    <script src="https://unpkg.com/fabric@latest/dist/fabric.js"></script><!--將 PDF 變為 canvas 背景-->
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script> <!-- PDF 渲染在畫面上-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script> <!--下載融合pdf檔-->
+    <script src="js/storage.js"></script>
     <script src="js/pdf.js"></script>
 
 </body>

@@ -1,193 +1,252 @@
-.history{
-
+.history {
+    color: $c-primary;
 }
-.img{
-    &-pdf{
+
+.img {
+    &-pdf {
         width: 133px;
     }
-    &-person1{
+
+    &-person1 {
         width: 142px;
         left: -7px;
         bottom: 26px;
     }
-    &-person2{
+
+    &-person2 {
         width: 97px;
         left: 117px;
         bottom: 19px;
     }
-    &-person3{
+
+    &-person3 {
         width: 108px;
         left: 232px;
         bottom: 33px;
     }
-    &-tree2{
+
+    &-tree2 {
         width: 76px;
         left: 198px;
         bottom: 19px;
     }
-    &-decoration{
+
+    &-decoration {
         width: 21px;
         left: 244px;
         bottom: 14px;
     }
-    &-greenblock1{
+
+    &-greenblock1 {
         width: 355px;
     }
-    &-angle{
-       width: 30px;
-       height: 30px;        
-       padding: 10.28px 11.96px; 
-       margin: 14px 16px;
+
+    &-angle {
+        width: 30px;
+        height: 30px;
+        padding: 10.28px 11.96px;
+        margin: 14px 16px;
     }
-    &-delete{
+
+    &-delete {
         width: 20px;
         margin-left: 18px;
         filter: $c-filter;
         cursor: pointer;
-        &:hover{
-            filter:$c-filter-primary;
+
+        &:hover {
+            filter: $c-filter-primary;
         }
     }
+
+    &-details {
+        width: 24px;
+        filter: $c-filter;
+    }
 }
-.file-upload{
+
+.file-upload {
     padding-top: 48.5px;
     padding-bottom: 110.5px;
     margin-bottom: 97px;
     width: 100%;
-    &__btn{
+
+    &__btn {
         padding: 17px 68.5px;
         display: inline-block;
     }
 }
-.copyright{
-    @include fzlh($fz-xs,$lh-xs);
+
+.copyright {
+    @include fzlh($fz-xs, $lh-xs);
     color: $c-fourth;
     padding-bottom: 10px;
     text-align: center;
 }
-.lottie{
+
+.lottie {
     width: 132px;
-    &__text{
+
+    &__text {
         color: $c-fourth;
-        @include fzlh($fz-lg,$lh-lg);
+        @include fzlh($fz-lg, $lh-lg);
     }
 }
 
-.colorPicker{    
+.colorPicker {
     border: 2px solid transparent;
     border-radius: 50%;
     margin: 0px 8px;
     cursor: pointer;
-    button{
+
+    button {
         border: 3px solid $c-tertiary;
         width: 45px;
         height: 45px;
         border-radius: 50%;
     }
-    &.black{
-        button{
+
+    &.black {
+        button {
             background: #000;
-        }        
-        &.active{
+        }
+
+        &.active {
             border-color: #000;
         }
     }
-    &.red{
-        button{
+
+    &.red {
+        button {
             background: #CA0000;
-        }        
-        &.active{
+        }
+
+        &.active {
             border-color: #CA0000;
         }
     }
-    &.blue{
-        button{
+
+    &.blue {
+        button {
             background: #0014C7;
-        }        
-        &.active{
+        }
+
+        &.active {
             border-color: #0014C7;
         }
     }
 }
 
-.canvas{
-    &-content{
+.canvas {
+    &-content {
         color: $c-fifth;
-        @include fzlh($fz-lg,$lh-lg);
+        @include fzlh($fz-lg, $lh-lg);
     }
-    &-sign{
+
+    &-sign {
         width: 100%;
         height: 200px;
     }
 }
 
-.pageNumber{
+.pageNumber {
     color: $c-fourth;
 }
-.canvas-wrap{
+
+.canvas-wrap {
     width: 100%;
     height: calc(100vh - 90px - 120px);
     overflow: overlay;
-    &::-webkit-scrollbar { 
+
+    &::-webkit-scrollbar {
         width: 10px;
         height: 10px;
-      }        
+    }
+
     &::-webkit-scrollbar-button {
         display: none;
-      }        
+    }
+
     &::-webkit-scrollbar-track-piece {
         background: transparent;
-      }        
-    &::-webkit-scrollbar-thumb {       
-        border-radius: 4px;        
-        background-color: transparent;        
-        border: 0px;        
-      }        
-    &::-webkit-scrollbar-track { 
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: transparent;
+        border: 0px;
+    }
+
+    &::-webkit-scrollbar-track {
         box-shadow: transparent;
-      }
-   
+    }
+    @include rwd($md){
+        width: 40%;
+    }
 }
-.unactive{
+
+.unactive {
     color: $c-fifth;
-    .nav-bottom{        
-        &__img{
+
+    .nav-bottom {
+        &__img {
             background: $c-sixth;
-            img{
+
+            img {
                 filter: $c-filter;
             }
         }
-        
-    }   
-    &.nav-bottom{
-        &__item:hover{
-            color: $c-secondary;
+
+    }
+
+    &.nav-bottom {
+        &__item:hover {
+            color: $c-primary;
+
             .nav-bottom__img {
-                background: $c-secondary;
-                img{
+                background: $c-primary;
+
+                img {
                     filter: none;
                 }
             }
-           
+
         }
-    } 
+    }
 }
 
-.newSign{
+.newSign {
     color: $c-primary;
-    @include fzlh($fz-md,$lh-md-l);
+    @include fzlh($fz-md, $lh-md-l);
 }
 
-.signList{
-    .sign{
+.signList {
+    .sign {
         height: 61px;
         cursor: pointer;
     }
 
 }
-.deleteBtn{
+
+.deleteBtn {
     width: 20px;
     height: 20px;
     border-radius: 5px;
     padding: 5px;
+}
+
+.card {
+    &List {
+        li+li {
+            margin-top: 10px;
+        }
+
+        &__item {
+            cursor: pointer;
+        }
+    }
+
+    &__content {
+        padding-left: 12px;
+    }
 }
