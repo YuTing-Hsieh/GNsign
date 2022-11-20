@@ -128,13 +128,16 @@ $('#savePDF').on('click', function () {
 });
 
 $('#toIndex').on('click',function(){
-  if(!isSave){
+  if(isSave){
+    location.href = "index.html";
+  }else{
     $('#modal-unSave').modal({
       escapeClose: false,
       clickClose: false,
       showClose: false
     });
-  } 
+  }
+
 })
 
 async function printPDF(pageNum) {
