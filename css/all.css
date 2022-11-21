@@ -959,6 +959,10 @@ h1 {
           filter: invert(50%) sepia(15%) saturate(16%) hue-rotate(103deg) brightness(96%) contrast(91%);
 }
 
+.img-tree-dry {
+  width: 95px;
+}
+
 .file-upload {
   padding-top: 48.5px;
   padding-bottom: 110.5px;
@@ -1132,5 +1136,9 @@ h1 {
 
 .card__content {
   padding-left: 12px;
+}
+
+.historyMessage {
+  height: calc(100vh - 56px);
 }
 /*# sourceMappingURL=all.css.map */

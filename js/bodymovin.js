@@ -16,7 +16,7 @@ var animation = bodymovin.loadAnimation({
 if(nextPage == "index"){
     $('.toIndex').show();
 } else{
-    // setTimeout('nextpage()', 3000);
+    setTimeout('nextpage()', 2000);
 }
 
 

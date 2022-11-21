@@ -6,6 +6,10 @@ const historyList = getStorageArray("historyList");
 $(window).on('load', async (e) => {
     localStorage.setItem("selectFile", "");
     loadPdfList();
+    if(historyList){
+        $('.historyMessage').hide();
+    }
+
 });
 
 $(document).on('click','.cardList__item', function () {
@@ -26,9 +30,7 @@ $(document).on('click','.cardList__item', function () {
 })
 
 function loadPdfList() {
-    // 若 localStorage 有資料才放入
-    
-
+    // 若 localStorage 有資料才放入   
     if (historyList) {
         historyList.forEach(function (item) {
             let historyPDF = JSON.parse(item);

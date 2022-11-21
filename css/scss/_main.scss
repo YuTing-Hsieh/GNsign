@@ -66,6 +66,10 @@
         width: 24px;
         filter: $c-filter;
     }
+
+    &-tree-dry{
+        width: 95px;
+    }
 }
 
 .file-upload {
@@ -252,4 +256,8 @@
     &__content {
         padding-left: 12px;
     }
+}
+
+.historyMessage {
+    height: calc(100vh - 56px);
 }
